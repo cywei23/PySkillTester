@@ -11,3 +11,14 @@ def pearson_correlation_coefficient(houses):
     correlation_coefficient = covariance / (var_bedrooms*var_prices)**0.5
     
     return correlation_coefficient
+
+
+houses = [
+    {"bedrooms": 2, "bathrooms": 1, "square_footage": 800, "price": 250000},
+    {"bedrooms": 3, "bathrooms": 2, "square_footage": 1200, "price": 350000},
+    {"bedrooms": 4, "bathrooms": 3, "square_footage": 2000, "price": 500000},
+    {"bedrooms": 5, "bathrooms": 4, "square_footage": 3000, "price": 750000},
+]
+
+output = pearson_correlation_coefficient(houses)
+print(output)  # Should be close to 1, as there is a strong positive correlation
